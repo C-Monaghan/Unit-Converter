@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Unit Converter</string>
+    <string name="measured_unit">Measured Unit</string>
+    <string name="round_up_conversion">Round up conversion?</string>
+    <string name="calculate">Calculate</string>
+    <string name="converted_amount">Converted amount:</string>
+    <string name="measured_amount">Measured Amount</string>
+    <string name="choose_what_to_convert_to">Choose what to convert to</string>
+    <string name="temperature">Temperature</string>
+    <string name="weight">Weight</string>
+    <string name="fluid">Fluid</string>
+    <string name="celsius_fahrenheit"><![CDATA[Celsius —> Fahrenheit]]></string>
+    <string name="fahrenheit_celsius"><![CDATA[Fahrenheit —> Celsius]]></string>
+    <string name="grams_cups"><![CDATA[Grams —> Cups]]></string>
+    <string name="cups_grams"><![CDATA[Cups —> Grams]]></string>
+    <string name="millilitres_fluid_ounces"><![CDATA[Millilitres —> Fluid Ounces]]></string>
+    <string name="fluid_ounces_millilitres"><![CDATA[Fluid Ounces —> Millilitres]]></string>
+</resources>
