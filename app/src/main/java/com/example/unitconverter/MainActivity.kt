@@ -16,11 +16,13 @@ class MainActivity : AppCompatActivity() {
         binding.calculateButton.setOnClickListener { (calculateConversion()) }
     }
 
+    // Function to calculate the conversion once the user clicks calculate
     private fun calculateConversion() {
         val stringInTextField = binding.measuredUnit.text.toString()
         val measure = stringInTextField.toDoubleOrNull()
         var convertedAmount: Double
 
+        // If user leaves text entry field blank
         if (measure == null) {
             displayConversion(0.0,"")
             return
@@ -35,6 +37,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        // Adds the necessary units to the selected conversion
         val unit: String = when(binding.unitOptions.checkedRadioButtonId) {
             R.id.celsius -> "°F"
             R.id.fahrenheit -> "°C"
@@ -44,6 +47,7 @@ class MainActivity : AppCompatActivity() {
             else -> "grams"
         }
 
+        // Rounds conversion up if option is selected
         if (binding.roundUpSwitch.isChecked) {
             convertedAmount = kotlin.math.ceil(convertedAmount)
         }
@@ -51,6 +55,7 @@ class MainActivity : AppCompatActivity() {
         displayConversion(convertedAmount, unit)
     }
 
+    // Function to display the converted output
     @SuppressLint("SetTextI18n")
     private fun displayConversion(convertedAmount: Double, unit: String) {
         binding.result.text = "Converted Amount: $convertedAmount $unit"
