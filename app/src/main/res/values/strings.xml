@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Unit Converter</string>
     <string name="measured_unit">Measured Unit</string>
-    <string name="round_up_conversion">Round up conversion?</string>
     <string name="calculate">Calculate</string>
     <string name="converted_amount">Converted amount:</string>
     <string name="measured_amount">Measured Amount</string>
@@ -15,4 +14,5 @@
     <string name="cups_grams"><![CDATA[Cups —> Grams]]></string>
     <string name="millilitres_fluid_ounces"><![CDATA[Millilitres —> Fluid Ounces]]></string>
     <string name="fluid_ounces_millilitres"><![CDATA[Fluid Ounces —> Millilitres]]></string>
+    <string name="round_conversion">Round conversion?</string>
 </resources>

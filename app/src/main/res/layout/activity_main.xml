@@ -115,12 +115,12 @@
     </RadioGroup>
 
     <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/round_up_switch"
+        android:id="@+id/round_switch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/round_up_conversion"
+        android:text="@string/round_conversion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/unit_options"
         app:layout_constraintTop_toBottomOf="@+id/unit_options"
@@ -132,9 +132,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/calculate"
-        app:layout_constraintEnd_toEndOf="@id/round_up_switch"
-        app:layout_constraintStart_toStartOf="@+id/round_up_switch"
-        app:layout_constraintTop_toBottomOf="@+id/round_up_switch" />
+        app:layout_constraintEnd_toEndOf="@id/round_switch"
+        app:layout_constraintStart_toStartOf="@+id/round_switch"
+        app:layout_constraintTop_toBottomOf="@+id/round_switch" />
 
     <TextView
         android:id="@+id/result"

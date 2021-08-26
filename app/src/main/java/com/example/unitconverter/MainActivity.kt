@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.unitconverter.databinding.ActivityMainBinding
+import kotlin.math.roundToInt
 
 class MainActivity : AppCompatActivity() {
 
@@ -48,8 +49,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Rounds conversion up if option is selected
-        if (binding.roundUpSwitch.isChecked) {
-            convertedAmount = kotlin.math.ceil(convertedAmount)
+        if (binding.roundSwitch.isChecked) {
+            convertedAmount = convertedAmount.roundToInt().toDouble()
         }
 
         displayConversion(convertedAmount, unit)
