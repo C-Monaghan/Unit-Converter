@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     // Function to calculate the conversion once the user clicks calculate
     private fun calculateConversion() {
-        val stringInTextField = binding.measuredUnit.text.toString()
+        val stringInTextField = binding.measuredUnitEditText.text.toString()
         val measure = stringInTextField.toDoubleOrNull()
         var convertedAmount: Double
 
@@ -58,6 +58,7 @@ class MainActivity : AppCompatActivity() {
     // Function to display the converted output
     @SuppressLint("SetTextI18n")
     private fun displayConversion(convertedAmount: Double, unit: String) {
-        binding.result.text = "Converted Amount: $convertedAmount $unit"
+        val convertedAmountDecimal = String.format("%.2f" , convertedAmount)
+        binding.result.text = "Converted Amount: $convertedAmountDecimal $unit"
     }
 }

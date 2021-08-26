@@ -7,32 +7,49 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/measured_unit"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/measured_amount"
-        android:importantForAutofill="no"
-        android:inputType="numberDecimal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+   <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/measured_unit"
+       android:layout_width="165dp"
+       android:layout_height="wrap_content"
+       android:hint="@string/measured_amount"
+       app:layout_constraintStart_toStartOf="@id/temperature"
+       app:layout_constraintTop_toTopOf="parent">
+
+       <com.google.android.material.textfield.TextInputEditText
+           android:id="@+id/measured_unit_edit_text"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:inputType="numberDecimal"/>
+
+   </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/conversion_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="@string/choose_what_to_convert_to"
         app:layout_constraintStart_toStartOf="@+id/measured_unit"
         app:layout_constraintTop_toBottomOf="@+id/measured_unit" />
 
+    <ImageView
+        android:id="@+id/temperature_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:importantForAccessibility="no"
+        app:srcCompat = "@drawable/ic_fire"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/temperature"
+        app:layout_constraintBottom_toBottomOf="@+id/temperature"/>
     <TextView
         android:id="@+id/temperature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="4dp"
+        android:layout_marginStart="16dp"
         android:text="@string/temperature"
-        app:layout_constraintStart_toStartOf="@+id/conversion_text"
+        app:layout_constraintStart_toEndOf="@+id/temperature_icon"
         app:layout_constraintTop_toBottomOf="@+id/conversion_text" />
 
     <RadioGroup
@@ -97,7 +114,7 @@
             android:text="@string/fluid_ounces_millilitres" />
     </RadioGroup>
 
-    <Switch
+    <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/round_up_switch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -128,5 +145,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calculate_button"
         tools:text="Converted amount " />
+
+    <ImageView
+        android:id="@+id/weight_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="@+id/temperature_icon"
+        app:layout_constraintTop_toTopOf="@+id/temperature_icon"
+        app:srcCompat="@drawable/ic_weight" />
+
+    <ImageView
+        android:id="@+id/fluid_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="125dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="@+id/weight_icon"
+        app:layout_constraintTop_toTopOf="@+id/weight_icon"
+        app:srcCompat="@drawable/ic_drink" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
